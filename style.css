@@ -128,3 +128,18 @@ text-align:center;
 padding:30px;
 background:#05070d;
   }
+section {
+  padding: 60px 20px;
+}
+
+.features {
+  margin-top: 40px;
+}
+
+.mission {
+  margin-top: 40px;
+}
+
+.founder {
+  margin-top: 40px;
+  }
