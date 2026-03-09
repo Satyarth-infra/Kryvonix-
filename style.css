@@ -11,13 +11,13 @@ color:white;
 line-height:1.6;
 }
 
-/* header */
+/* HEADER */
 
 header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:18px 8%;
+padding:15px 8%;
 background:#05070d;
 }
 
@@ -28,128 +28,126 @@ color:#4cc9f0;
 }
 
 nav a{
-margin-left:25px;
-text-decoration:none;
 color:white;
+text-decoration:none;
+margin-left:18px;
 font-size:14px;
+opacity:0.8;
 }
 
-/* hero */
+nav a:hover{
+color:#4cc9f0;
+}
+
+/* HERO */
 
 .hero{
 text-align:center;
-padding:90px 20px;
-background:linear-gradient(135deg,#0b0f19,#111827);
+padding:60px 20px;
 }
 
 .hero h1{
-font-size:45px;
-background:linear-gradient(90deg,#4cc9f0,#8b5cf6);
--webkit-background-clip:text;
-color:transparent;
+font-size:32px;
+color:#7fb5ff;
+margin-bottom:12px;
 }
 
 .hero p{
-margin-top:15px;
-max-width:600px;
-margin-left:auto;
-margin-right:auto;
-font-size:15px;
+font-size:14px;
+max-width:500px;
+margin:auto;
+opacity:0.8;
 }
 
 .btn{
 display:inline-block;
-margin-top:25px;
-padding:12px 30px;
+margin-top:20px;
+padding:12px 28px;
 background:#4cc9f0;
-color:black;
+color:#000;
+border-radius:6px;
 text-decoration:none;
 font-weight:600;
-border-radius:8px;
 }
 
-/* features */
+/* SECTIONS */
 
-.features{
-padding:60px 8%;
+section{
+padding:50px 8%;
 text-align:center;
 }
 
-.cards{
+/* FEATURES */
+
+.features-container{
 display:flex;
-gap:25px;
-margin-top:30px;
-justify-content:center;
 flex-wrap:wrap;
+gap:18px;
+justify-content:center;
+margin-top:25px;
 }
 
-.card{
+.feature-box{
 background:#111827;
-padding:30px;
-border-radius:12px;
-width:240px;
-transition:0.3s;
+padding:20px;
+border-radius:10px;
+width:260px;
 }
 
-.card:hover{
-transform:translateY(-6px);
+.feature-box h3{
+margin-bottom:8px;
 }
 
-/* mission */
+/* MISSION */
 
-.mission{
-text-align:center;
-padding:60px 15%;
-background:#05070d;
+.mission p{
+max-width:600px;
+margin:auto;
+opacity:0.85;
 }
 
-/* founder */
-
-.founder{
-text-align:center;
-padding:60px 8%;
-}
+/* FOUNDER */
 
 .founder-card{
 background:#111827;
-padding:35px;
-border-radius:12px;
-width:260px;
+padding:25px;
+border-radius:10px;
+width:220px;
 margin:auto;
+margin-top:20px;
 }
 
 .founder-card img{
 width:70px;
-margin-bottom:15px;
+border-radius:50%;
+margin-bottom:12px;
 }
 
-/* footer */
+/* FOOTER */
 
 footer{
 text-align:center;
-padding:25px;
+padding:18px;
 background:#05070d;
+margin-top:40px;
+font-size:14px;
+opacity:0.7;
 }
 
-/* mobile */
+/* MOBILE FIX */
 
-@media(max-width:768px){
+@media (max-width:768px){
 
-.hero h1{
-font-size:36px;
+.hero{
+padding:45px 15px;
 }
 
-.cards{
-flex-direction:column;
-align-items:center;
+section{
+padding:40px 6%;
 }
 
-.card{
-width:90%;
-}
-
-.mission{
-padding:60px 10%;
+.feature-box{
+width:100%;
 }
 
   }
