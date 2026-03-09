@@ -19,13 +19,13 @@
 
 <body>
 
-
 <header>
 
 <div class="logo">Kryvonix</div>
 
 <nav>
 <a href="#features">Features</a>
+<a href="#demo">AI Demo</a>
 <a href="#roadmap">Roadmap</a>
 <a href="#founder">Founder</a>
 </nav>
@@ -39,8 +39,8 @@
 <h1>The Future of AI Tools</h1>
 
 <p>
-Kryvonix is building powerful AI tools for developers, creators and innovators.
-Faster. Smarter. Limitless.
+Kryvonix is building powerful AI tools for developers and creators.
+Experience the next generation of artificial intelligence.
 </p>
 
 <a href="underdev.html" class="btn">Get Started</a>
@@ -62,12 +62,34 @@ Faster. Smarter. Limitless.
 
 <div class="feature-card">
 <h3>Image Generator</h3>
-<p>Create stunning images from simple prompts.</p>
+<p>Create stunning visuals from prompts.</p>
 </div>
 
 <div class="feature-card">
 <h3>Code Assistant</h3>
-<p>Write, debug and improve code faster with AI.</p>
+<p>Generate and debug code faster.</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+<section id="demo">
+
+<h2>Try Kryvonix AI</h2>
+
+<div class="ai-demo">
+
+<div id="chat-box"></div>
+
+<div class="input-area">
+
+<input id="user-input" type="text" placeholder="Ask Kryvonix something...">
+
+<button onclick="sendMessage()">Send</button>
+
 </div>
 
 </div>
@@ -84,12 +106,12 @@ Faster. Smarter. Limitless.
 
 <div class="roadmap-card">
 <h3>2026</h3>
-<p>Launch Kryvonix AI Chat</p>
+<p>AI Chat Launch</p>
 </div>
 
 <div class="roadmap-card">
 <h3>2027</h3>
-<p>Release AI Image Generator</p>
+<p>Image Generator</p>
 </div>
 
 <div class="roadmap-card">
@@ -98,20 +120,6 @@ Faster. Smarter. Limitless.
 </div>
 
 </div>
-
-</section>
-
-
-
-<section id="waitlist">
-
-<h2>Join Early Access</h2>
-
-<p>Be the first to experience Kryvonix AI.</p>
-
-<input type="email" placeholder="Enter your email">
-
-<button>Join Waitlist</button>
 
 </section>
 
@@ -127,9 +135,7 @@ Faster. Smarter. Limitless.
 
 <h3>Satyarth</h3>
 
-<p>
-Founder of Kryvonix AI. Building accessible artificial intelligence for everyone.
-</p>
+<p>Founder of Kryvonix AI. Building accessible AI tools for the future.</p>
 
 </div>
 
@@ -143,6 +149,44 @@ Founder of Kryvonix AI. Building accessible artificial intelligence for everyone
 
 </footer>
 
+
+
+<script>
+
+function sendMessage(){
+
+let input=document.getElementById("user-input");
+let chat=document.getElementById("chat-box");
+
+let userText=input.value;
+
+if(userText==="") return;
+
+let userMsg=document.createElement("div");
+userMsg.className="user-msg";
+userMsg.innerText=userText;
+
+chat.appendChild(userMsg);
+
+input.value="";
+
+
+setTimeout(function(){
+
+let aiMsg=document.createElement("div");
+aiMsg.className="ai-msg";
+
+aiMsg.innerText="Kryvonix AI is still under development, but soon it will answer questions, generate images and assist with coding.";
+
+chat.appendChild(aiMsg);
+
+chat.scrollTop=chat.scrollHeight;
+
+},700);
+
+}
+
+</script>
 
 </body>
   </html>
