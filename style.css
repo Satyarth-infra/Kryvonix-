@@ -33,11 +33,6 @@ color:white;
 text-decoration:none;
 margin-left:25px;
 font-size:14px;
-transition:0.3s;
-}
-
-nav a:hover{
-color:#4cc9f0;
 }
 
 
@@ -51,17 +46,15 @@ padding:120px 20px;
 
 .hero h1{
 font-size:48px;
-margin-bottom:15px;
 color:#7fb5ff;
 }
 
 .hero p{
 max-width:600px;
 margin:auto;
+margin-top:15px;
 opacity:0.8;
 }
-
-
 
 .btn{
 display:inline-block;
@@ -69,14 +62,9 @@ margin-top:30px;
 padding:14px 30px;
 background:#4cc9f0;
 color:black;
-font-weight:600;
 border-radius:8px;
 text-decoration:none;
-transition:0.3s;
-}
-
-.btn:hover{
-transform:scale(1.05);
+font-weight:600;
 }
 
 
@@ -106,7 +94,64 @@ transition:0.3s;
 
 .feature-card:hover{
 transform:translateY(-10px);
-box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+
+
+/* AI DEMO */
+
+#demo{
+padding:100px 10%;
+text-align:center;
+}
+
+.ai-demo{
+background:#111827;
+width:420px;
+margin:auto;
+border-radius:12px;
+padding:20px;
+}
+
+#chat-box{
+height:200px;
+overflow-y:auto;
+background:#0b0f19;
+padding:10px;
+border-radius:8px;
+margin-bottom:15px;
+}
+
+.user-msg{
+text-align:right;
+margin:8px 0;
+color:#4cc9f0;
+}
+
+.ai-msg{
+text-align:left;
+margin:8px 0;
+color:white;
+}
+
+.input-area{
+display:flex;
+gap:10px;
+}
+
+.input-area input{
+flex:1;
+padding:10px;
+border:none;
+border-radius:6px;
+}
+
+.input-area button{
+padding:10px 15px;
+border:none;
+border-radius:6px;
+background:#4cc9f0;
+font-weight:600;
 }
 
 
@@ -131,32 +176,6 @@ background:#111827;
 padding:30px;
 border-radius:12px;
 width:220px;
-}
-
-
-
-/* WAITLIST */
-
-#waitlist{
-padding:100px 10%;
-text-align:center;
-}
-
-#waitlist input{
-padding:12px;
-width:250px;
-border:none;
-border-radius:6px;
-margin-top:20px;
-}
-
-#waitlist button{
-padding:12px 20px;
-margin-left:10px;
-background:#4cc9f0;
-border:none;
-border-radius:6px;
-font-weight:600;
 }
 
 
@@ -192,7 +211,6 @@ text-align:center;
 padding:30px;
 background:#05070d;
 margin-top:50px;
-opacity:0.8;
 }
 
 
@@ -200,10 +218,6 @@ opacity:0.8;
 /* MOBILE */
 
 @media(max-width:768px){
-
-.hero h1{
-font-size:34px;
-}
 
 .features-container{
 flex-direction:column;
@@ -213,6 +227,10 @@ align-items:center;
 .roadmap-container{
 flex-direction:column;
 align-items:center;
+}
+
+.ai-demo{
+width:100%;
 }
 
   }
