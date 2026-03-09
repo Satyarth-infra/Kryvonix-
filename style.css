@@ -6,9 +6,11 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#0b0f19;
+background:linear-gradient(135deg,#05070d,#0b0f19,#111827);
 color:white;
 }
+
+
 
 /* HEADER */
 
@@ -21,7 +23,7 @@ background:#05070d;
 }
 
 .logo{
-font-size:22px;
+font-size:24px;
 font-weight:700;
 color:#4cc9f0;
 }
@@ -29,101 +31,188 @@ color:#4cc9f0;
 nav a{
 color:white;
 text-decoration:none;
-margin-left:20px;
+margin-left:25px;
 font-size:14px;
+transition:0.3s;
 }
+
+nav a:hover{
+color:#4cc9f0;
+}
+
+
 
 /* HERO */
 
 .hero{
 text-align:center;
-padding:80px 20px;
+padding:120px 20px;
 }
 
 .hero h1{
-font-size:36px;
+font-size:48px;
+margin-bottom:15px;
 color:#7fb5ff;
 }
 
 .hero p{
-margin-top:10px;
-font-size:15px;
+max-width:600px;
+margin:auto;
 opacity:0.8;
 }
 
+
+
 .btn{
 display:inline-block;
-margin-top:25px;
-padding:12px 28px;
+margin-top:30px;
+padding:14px 30px;
 background:#4cc9f0;
 color:black;
-border-radius:6px;
-text-decoration:none;
 font-weight:600;
+border-radius:8px;
+text-decoration:none;
+transition:0.3s;
 }
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+
 
 /* FEATURES */
 
 #features{
-padding:70px 10%;
+padding:100px 10%;
 text-align:center;
 }
 
 .features-container{
 display:flex;
 justify-content:center;
-gap:25px;
-margin-top:30px;
+gap:30px;
+margin-top:40px;
+flex-wrap:wrap;
 }
 
-.feature-box{
+.feature-card{
 background:#111827;
-padding:25px;
-border-radius:10px;
-width:250px;
+padding:30px;
+width:260px;
+border-radius:12px;
+transition:0.3s;
 }
 
-/* MISSION */
+.feature-card:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
 
-#mission{
-padding:70px 10%;
+
+
+/* ROADMAP */
+
+#roadmap{
+padding:100px 10%;
 text-align:center;
 }
 
-#mission p{
-margin-top:15px;
-max-width:600px;
-margin-left:auto;
-margin-right:auto;
+.roadmap-container{
+display:flex;
+justify-content:center;
+gap:30px;
+margin-top:40px;
+flex-wrap:wrap;
 }
+
+.roadmap-card{
+background:#111827;
+padding:30px;
+border-radius:12px;
+width:220px;
+}
+
+
+
+/* WAITLIST */
+
+#waitlist{
+padding:100px 10%;
+text-align:center;
+}
+
+#waitlist input{
+padding:12px;
+width:250px;
+border:none;
+border-radius:6px;
+margin-top:20px;
+}
+
+#waitlist button{
+padding:12px 20px;
+margin-left:10px;
+background:#4cc9f0;
+border:none;
+border-radius:6px;
+font-weight:600;
+}
+
+
 
 /* FOUNDER */
 
 #founder{
-padding:70px 10%;
+padding:100px 10%;
 text-align:center;
 }
 
 .founder-card{
 background:#111827;
-padding:30px;
-border-radius:10px;
-width:230px;
+padding:40px;
+border-radius:12px;
+width:260px;
 margin:auto;
-margin-top:25px;
+margin-top:40px;
 }
 
 .founder-card img{
-width:80px;
+width:90px;
 border-radius:50%;
 margin-bottom:15px;
 }
+
+
 
 /* FOOTER */
 
 footer{
 text-align:center;
-padding:20px;
+padding:30px;
 background:#05070d;
-margin-top:40px;
+margin-top:50px;
+opacity:0.8;
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:34px;
+}
+
+.features-container{
+flex-direction:column;
+align-items:center;
+}
+
+.roadmap-container{
+flex-direction:column;
+align-items:center;
+}
+
   }
