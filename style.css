@@ -6,11 +6,10 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#05070d,#0b0f19,#111827);
+background:#0b0f19;
 color:white;
+line-height:1.6;
 }
-
-
 
 /* HEADER */
 
@@ -23,186 +22,168 @@ background:#05070d;
 }
 
 .logo{
-font-size:24px;
+font-size:22px;
 font-weight:700;
 color:#4cc9f0;
 }
 
 nav a{
-color:white;
-text-decoration:none;
 margin-left:25px;
-font-size:14px;
-}
-
-
-
-/* HERO */
-
-.hero{
-text-align:center;
-padding:120px 20px;
-}
-
-.hero h1{
-font-size:48px;
-color:#7fb5ff;
-}
-
-.hero p{
-max-width:600px;
-margin:auto;
-margin-top:15px;
-opacity:0.8;
-}
-
-.btn{
-display:inline-block;
-margin-top:30px;
-padding:14px 30px;
-background:#4cc9f0;
-color:black;
-border-radius:8px;
 text-decoration:none;
-font-weight:600;
-}
-
-
-
-/* FEATURES */
-
-#features{
-padding:100px 10%;
-text-align:center;
-}
-
-.features-container{
-display:flex;
-justify-content:center;
-gap:30px;
-margin-top:40px;
-flex-wrap:wrap;
-}
-
-.feature-card{
-background:#111827;
-padding:30px;
-width:260px;
-border-radius:12px;
+color:white;
+font-size:15px;
 transition:0.3s;
 }
 
-.feature-card:hover{
-transform:translateY(-10px);
-}
-
-
-
-/* AI DEMO */
-
-#demo{
-padding:100px 10%;
-text-align:center;
-}
-
-.ai-demo{
-background:#111827;
-width:420px;
-margin:auto;
-border-radius:12px;
-padding:20px;
-}
-
-#chat-box{
-height:200px;
-overflow-y:auto;
-background:#0b0f19;
-padding:10px;
-border-radius:8px;
-margin-bottom:15px;
-}
-
-.user-msg{
-text-align:right;
-margin:8px 0;
+nav a:hover{
 color:#4cc9f0;
 }
 
-.ai-msg{
-text-align:left;
-margin:8px 0;
-color:white;
+/* HERO SECTION */
+
+.hero{
+text-align:center;
+padding:100px 20px;
 }
 
-.input-area{
-display:flex;
-gap:10px;
+.hero h1{
+font-size:42px;
+margin-bottom:20px;
 }
 
-.input-area input{
-flex:1;
-padding:10px;
+.hero p{
+color:#b0bec5;
+max-width:600px;
+margin:auto;
+margin-bottom:30px;
+}
+
+.hero button{
+padding:12px 28px;
 border:none;
-border-radius:6px;
-}
-
-.input-area button{
-padding:10px 15px;
-border:none;
-border-radius:6px;
 background:#4cc9f0;
+color:black;
 font-weight:600;
+border-radius:6px;
+cursor:pointer;
 }
 
+/* AI DEMO SECTION */
 
-
-/* ROADMAP */
-
-#roadmap{
-padding:100px 10%;
+.ai-demo{
+padding:80px 20px;
 text-align:center;
 }
 
-.roadmap-container{
-display:flex;
-justify-content:center;
-gap:30px;
-margin-top:40px;
-flex-wrap:wrap;
+.ai-demo h2{
+font-size:28px;
+margin-bottom:10px;
 }
 
-.roadmap-card{
-background:#111827;
+.ai-demo p{
+color:#b0bec5;
+margin-bottom:30px;
+}
+
+/* DEMO BOX */
+
+.demo-box{
+max-width:420px;
+margin:auto;
+background:#10172a;
 padding:30px;
 border-radius:12px;
-width:220px;
+box-shadow:0 0 15px rgba(0,0,0,0.6);
 }
 
+/* INPUT */
 
+.demo-box input{
+width:100%;
+padding:12px;
+border:none;
+border-radius:6px;
+margin-bottom:15px;
+font-size:14px;
+}
+
+/* BUTTON */
+
+.demo-box button{
+width:100%;
+padding:12px;
+background:#4cc9f0;
+border:none;
+border-radius:6px;
+font-weight:600;
+cursor:pointer;
+}
+
+/* IMAGE BELOW DEMO */
+
+.ai-image{
+margin-top:50px;
+text-align:center;
+}
+
+.ai-image img{
+width:100%;
+max-width:600px;
+border-radius:10px;
+}
+
+/* FEATURES */
+
+.features{
+padding:80px 10%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.feature-box{
+background:#10172a;
+padding:25px;
+border-radius:10px;
+text-align:center;
+}
+
+.feature-box h3{
+margin-bottom:10px;
+color:#4cc9f0;
+}
 
 /* FOUNDER */
 
-#founder{
-padding:100px 10%;
+.founder{
+padding:80px 20px;
 text-align:center;
 }
 
-.founder-card{
-background:#111827;
-padding:40px;
-border-radius:12px;
-width:260px;
-margin:auto;
-margin-top:40px;
-}
-
-.founder-card img{
-width:90px;
+.founder img{
+width:140px;
+height:140px;
 border-radius:50%;
 margin-bottom:15px;
 }
 
+/* ROADMAP */
 
+.roadmap{
+padding:80px 10%;
+}
+
+.roadmap h2{
+text-align:center;
+margin-bottom:40px;
+}
+
+.roadmap-step{
+background:#10172a;
+padding:20px;
+border-radius:10px;
+margin-bottom:20px;
+}
 
 /* FOOTER */
 
@@ -210,27 +191,29 @@ footer{
 text-align:center;
 padding:30px;
 background:#05070d;
-margin-top:50px;
+margin-top:60px;
+color:#b0bec5;
 }
 
-
-
-/* MOBILE */
+/* MOBILE FIX */
 
 @media(max-width:768px){
 
-.features-container{
-flex-direction:column;
-align-items:center;
+.hero h1{
+font-size:32px;
 }
 
-.roadmap-container{
-flex-direction:column;
-align-items:center;
+header{
+padding:15px 5%;
 }
 
-.ai-demo{
-width:100%;
+nav a{
+margin-left:15px;
+font-size:14px;
+}
+
+.demo-box{
+padding:20px;
 }
 
   }
