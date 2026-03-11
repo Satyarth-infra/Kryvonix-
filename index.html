@@ -5,15 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kryvonix AI</title>
 
-<link rel="icon" type="image/png" href="favicon.png">
-
 <style>
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+font-family:Arial;
 }
 
 body{
@@ -33,15 +31,8 @@ background:#05070d;
 
 .logo{
 font-size:22px;
-font-weight:700;
+font-weight:bold;
 color:#4cc9f0;
-}
-
-nav a{
-margin-left:20px;
-text-decoration:none;
-color:white;
-font-size:14px;
 }
 
 /* HERO */
@@ -65,52 +56,15 @@ color:#aaa;
 margin-bottom:30px;
 }
 
-.hero button{
+/* BUTTON */
+
+.btn{
 padding:14px 35px;
-border:none;
 background:#4cc9f0;
 color:black;
+text-decoration:none;
+border-radius:8px;
 font-size:16px;
-border-radius:8px;
-cursor:pointer;
-}
-
-/* AI DEMO */
-
-.ai-demo{
-padding:80px 20px;
-text-align:center;
-}
-
-.ai-box{
-max-width:600px;
-margin:auto;
-background:#111827;
-padding:40px;
-border-radius:15px;
-}
-
-.ai-box input{
-width:100%;
-padding:15px;
-border:none;
-border-radius:8px;
-margin-bottom:20px;
-background:#0b0f19;
-color:white;
-}
-
-.ai-box button{
-padding:12px 30px;
-background:#4cc9f0;
-border:none;
-border-radius:8px;
-cursor:pointer;
-}
-
-.response{
-margin-top:20px;
-color:#ddd;
 }
 
 /* FEATURES */
@@ -121,8 +75,8 @@ text-align:center;
 }
 
 .features h2{
-margin-bottom:40px;
 color:#4cc9f0;
+margin-bottom:40px;
 }
 
 .feature-grid{
@@ -150,10 +104,6 @@ border-radius:50%;
 margin-bottom:20px;
 }
 
-.founder h3{
-color:#4cc9f0;
-}
-
 /* ROADMAP */
 
 .roadmap{
@@ -162,26 +112,25 @@ text-align:center;
 }
 
 .roadmap h2{
-margin-bottom:40px;
 color:#4cc9f0;
+margin-bottom:40px;
 }
 
 .roadmap-item{
-margin:20px auto;
-max-width:500px;
 background:#111827;
 padding:20px;
 border-radius:10px;
+margin:15px auto;
+max-width:500px;
 }
 
 /* FOOTER */
 
 footer{
+background:#05070d;
 text-align:center;
 padding:30px;
-background:#05070d;
 color:#777;
-margin-top:60px;
 }
 
 </style>
@@ -191,35 +140,18 @@ margin-top:60px;
 
 <header>
 <div class="logo">Kryvonix AI</div>
-<nav>
-<a href="#">Home</a>
-<a href="#">Features</a>
-<a href="#">Demo</a>
-<a href="#">Roadmap</a>
-</nav>
 </header>
 
 <section class="hero">
-<h1>The Future of <span>AI Tools</span></h1>
-<p>Powerful artificial intelligence for creators and developers.</p>
-<button>Get Started</button>
-</section>
 
-<section class="ai-demo">
+<h1>The Future of <span>Artificial Intelligence</span></h1>
 
-<h2>Try Kryvonix AI</h2>
+<p>Powerful AI tools for creators and developers.</p>
 
-<div class="ai-box">
-
-<input id="aiInput" type="text" placeholder="Ask Kryvonix AI anything...">
-
-<button onclick="generateAI()">Generate</button>
-
-<div id="aiResponse" class="response"></div>
-
-</div>
+<a href="ai.html" class="btn">Get Started</a>
 
 </section>
+
 
 <section class="features">
 
@@ -229,85 +161,58 @@ margin-top:60px;
 
 <div class="feature">
 <h3>AI Generation</h3>
-<p>Create content and ideas instantly.</p>
+<p>Create content instantly.</p>
 </div>
 
 <div class="feature">
-<h3>Smart Automation</h3>
-<p>Automate tasks with intelligent tools.</p>
+<h3>Smart Tools</h3>
+<p>Automate work with AI.</p>
 </div>
 
 <div class="feature">
-<h3>Developer Friendly</h3>
-<p>Built for builders and innovators.</p>
-</div>
-
-<div class="feature">
-<h3>Future AI Models</h3>
-<p>Next generation AI capabilities.</p>
+<h3>Developer Ready</h3>
+<p>Built for innovators.</p>
 </div>
 
 </div>
 
 </section>
+
 
 <section class="founder">
 
 <img src="founder.jpg">
 
 <h3>Satyarth</h3>
+
 <p>Founder of Kryvonix AI</p>
 
 </section>
+
 
 <section class="roadmap">
 
 <h2>Roadmap</h2>
 
 <div class="roadmap-item">
-<b>Phase 1</b>
-<p>Launch Kryvonix website</p>
+Phase 1 – Website Launch
 </div>
 
 <div class="roadmap-item">
-<b>Phase 2</b>
-<p>Release AI demo tools</p>
+Phase 2 – AI Demo Release
 </div>
 
 <div class="roadmap-item">
-<b>Phase 3</b>
-<p>Develop full AI platform</p>
-</div>
-
-<div class="roadmap-item">
-<b>Phase 4</b>
-<p>Launch public AI services</p>
+Phase 3 – Full AI Platform
 </div>
 
 </section>
 
 <footer>
+
 © 2026 Kryvonix AI
+
 </footer>
 
-<script>
-
-function generateAI(){
-
-const input=document.getElementById("aiInput").value;
-const output=document.getElementById("aiResponse");
-
-output.innerHTML="Generating response...";
-
-setTimeout(function(){
-
-output.innerHTML="Kryvonix AI is designed to help users generate ideas, automate work, and build smarter digital tools.";
-
-},2000);
-
-}
-
-</script>
-
 </body>
-  </html>
+</html>
