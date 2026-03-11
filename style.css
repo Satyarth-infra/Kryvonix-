@@ -35,7 +35,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #4cc9f0;
+  color: #36a1d8;
 }
 
 /* ----------------- Hero Section ----------------- */
@@ -55,15 +55,31 @@ nav a:hover {
   margin-bottom: 25px;
 }
 
-/* Hacker Image */
 .hacker-image {
-  width: 250px;
-  height: 250px;
+  width: 180px;
+  height: auto;
+  display: block;
   margin: 20px auto;
   border-radius: 10px;
   box-shadow: 0 0 20px #4cc9f0;
-  background: url('IMG-20260307-WAOOOO.jpg') no-repeat center center;
-  background-size: cover;
+}
+
+/* Buttons */
+button, .btn {
+  padding: 12px 30px;
+  background: #4cc9f0;
+  border: none;
+  border-radius: 8px;
+  color: #05070d;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+button:hover, .btn:hover {
+  background: #36a1d8;
 }
 
 /* ----------------- Features Section ----------------- */
@@ -72,12 +88,18 @@ nav a:hover {
   text-align: center;
 }
 
+.feature-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 .feature-box {
   background: #05070d;
   padding: 20px;
-  margin: 20px auto;
   border-radius: 10px;
-  max-width: 400px;
+  width: 300px;
   box-shadow: 0 0 15px #4cc9f0;
 }
 
@@ -128,32 +150,45 @@ nav a:hover {
   margin-bottom: 15px;
 }
 
-/* ----------------- Buttons ----------------- */
-button, .btn {
-  padding: 12px 30px;
-  background: #4cc9f0;
-  border: none;
-  border-radius: 8px;
-  color: #05070d;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
+/* ----------------- Roadmap Section ----------------- */
+#roadmap {
+  padding: 50px 10%;
+  text-align: center;
 }
 
-button:hover, .btn:hover {
-  background: #36a1d8;
+.roadmap-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.roadmap-step {
+  background: #05070d;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 0 15px #4cc9f0;
+}
+
+/* ----------------- Sections Titles ----------------- */
+section h2 {
+  font-size: 28px;
+  color: #4cc9f0;
+  margin-bottom: 25px;
 }
 
 /* ----------------- Responsive ----------------- */
 @media (max-width: 1024px) {
   .hacker-image {
-    width: 200px;
-    height: 200px;
+    width: 150px;
   }
-
   .founder-image {
     width: 120px;
     height: 120px;
+  }
+  .feature-box, .roadmap-step {
+    width: 45%;
   }
 }
 
@@ -168,15 +203,17 @@ button:hover, .btn:hover {
   }
 
   .hacker-image {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+  }
+
+  .feature-box, .roadmap-step {
+    width: 80%;
   }
 }
 
 @media (max-width: 480px) {
   .hacker-image {
     width: 120px;
-    height: 120px;
   }
 
   section h2 {
