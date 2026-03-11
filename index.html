@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kryvonix AI</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 <style>
 
 *{
@@ -19,7 +21,7 @@ background:#0b0f19;
 color:white;
 }
 
-/* header */
+/* HEADER */
 
 header{
 display:flex;
@@ -31,24 +33,26 @@ background:#05070d;
 
 .logo{
 font-size:22px;
-font-weight:700;
+font-weight:600;
 color:#4cc9f0;
 }
 
-/* hero */
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:white;
+}
+
+/* HERO */
 
 .hero{
 text-align:center;
-padding:120px 20px;
+padding:120px 10%;
 }
 
 .hero h1{
-font-size:48px;
+font-size:45px;
 margin-bottom:20px;
-}
-
-.hero span{
-color:#4cc9f0;
 }
 
 .hero p{
@@ -56,132 +60,111 @@ color:#aaa;
 margin-bottom:30px;
 }
 
-.hero button{
-padding:14px 35px;
-border:none;
-background:#4cc9f0;
-color:black;
-font-size:16px;
-border-radius:8px;
-cursor:pointer;
-}
-
-/* ai demo */
-
-.ai-demo{
-padding:80px 20px;
-text-align:center;
-}
-
-.ai-demo h2{
-color:#4cc9f0;
-margin-bottom:30px;
-}
-
-.ai-box{
-max-width:600px;
-margin:auto;
-background:#111827;
-padding:40px;
-border-radius:12px;
-}
-
-.ai-box input{
-width:100%;
-padding:15px;
-border:none;
-border-radius:8px;
-margin-bottom:20px;
-background:#0b0f19;
-color:white;
-}
-
-.ai-box button{
+.btn{
 padding:12px 25px;
 background:#4cc9f0;
 border:none;
-border-radius:8px;
+color:black;
+font-weight:600;
 cursor:pointer;
+border-radius:5px;
+text-decoration:none;
 }
 
-.response{
-margin-top:20px;
-color:#ddd;
-}
-
-/* features */
+/* FEATURES */
 
 .features{
+padding:80px 10%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.feature-box{
+background:#10172a;
+padding:30px;
+border-radius:10px;
+text-align:center;
+}
+
+.feature-box h3{
+margin-bottom:10px;
+color:#4cc9f0;
+}
+
+/* AI DEMO */
+
+.demo{
 padding:80px 10%;
 text-align:center;
 }
 
-.features h2{
-color:#4cc9f0;
-margin-bottom:40px;
-}
-
-.feature-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-}
-
-.feature{
-background:#111827;
-padding:25px;
+.demo-box{
+margin-top:30px;
+background:#10172a;
+padding:30px;
 border-radius:10px;
 }
 
-/* founder */
+.demo-box input{
+width:80%;
+padding:12px;
+border:none;
+border-radius:5px;
+margin-bottom:10px;
+}
+
+.demo-box button{
+padding:10px 20px;
+background:#4cc9f0;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* FOUNDER */
 
 .founder{
-padding:80px 20px;
+padding:80px 10%;
 text-align:center;
-background:#05070d;
 }
 
 .founder img{
-width:150px;
-height:150px;
+width:200px;
 border-radius:50%;
-object-fit:cover;
-border:3px solid #4cc9f0;
+border:4px solid #4cc9f0;
 margin-bottom:20px;
 }
 
-.founder h3{
+.founder h2{
 color:#4cc9f0;
 }
 
-/* roadmap */
+/* ROADMAP */
 
 .roadmap{
-padding:80px 20px;
+padding:80px 10%;
 text-align:center;
 }
 
-.roadmap h2{
-color:#4cc9f0;
-margin-bottom:40px;
+.roadmap ul{
+list-style:none;
+margin-top:30px;
 }
 
-.roadmap-item{
-background:#111827;
-padding:20px;
-margin:15px auto;
-max-width:500px;
-border-radius:10px;
+.roadmap li{
+margin-bottom:15px;
+color:#aaa;
 }
 
-/* footer */
+/* FOOTER */
 
 footer{
-background:#05070d;
 text-align:center;
-padding:30px;
+padding:20px;
+background:#05070d;
+margin-top:50px;
 color:#777;
-margin-top:60px;
 }
 
 </style>
@@ -190,116 +173,86 @@ margin-top:60px;
 <body>
 
 <header>
-
 <div class="logo">Kryvonix AI</div>
-
+<nav>
+<a href="#">Home</a>
+<a href="#">Features</a>
+<a href="#">Roadmap</a>
+</nav>
 </header>
 
-
 <section class="hero">
-
-<h1>The Future of <span>Artificial Intelligence</span></h1>
-
-<p>Powerful AI tools for creators and developers.</p>
-
-<button onclick="window.location.href='ai.html'">Get Started</button>
-
+<h1>Kryvonix AI</h1>
+<p>Next-generation AI tools for creators, developers, and innovators.</p>
+<a href="#demo" class="btn">Get Started</a>
 </section>
-
-
-<section class="ai-demo">
-
-<h2>Try Kryvonix AI</h2>
-
-<div class="ai-box">
-
-<input id="aiInput" type="text" placeholder="Ask Kryvonix AI anything...">
-
-<button onclick="generateAI()">Generate</button>
-
-<div id="aiResponse" class="response"></div>
-
-</div>
-
-</section>
-
 
 <section class="features">
 
-<h2>Features</h2>
-
-<div class="feature-grid">
-
-<div class="feature">
-<h3>AI Generation</h3>
-<p>Create content instantly using AI.</p>
+<div class="feature-box">
+<h3>⚡ Smart Automation</h3>
+<p>Automate tasks and workflows with intelligent AI tools.</p>
 </div>
 
-<div class="feature">
-<h3>Smart Automation</h3>
-<p>Automate tasks and workflows.</p>
+<div class="feature-box">
+<h3>🧠 AI Intelligence</h3>
+<p>Generate ideas, content, and solutions instantly.</p>
 </div>
 
-<div class="feature">
-<h3>Developer Friendly</h3>
-<p>Built for builders and innovators.</p>
-</div>
-
+<div class="feature-box">
+<h3>🛠 Developer Friendly</h3>
+<p>Built for builders and innovators creating the future.</p>
 </div>
 
 </section>
 
+<section class="demo" id="demo">
+
+<h2>Try Kryvonix AI</h2>
+<p>Demo preview of the future AI assistant.</p>
+
+<div class="demo-box">
+
+<input type="text" placeholder="Ask Kryvonix AI something...">
+
+<br>
+
+<button>Generate</button>
+
+</div>
+
+</section>
 
 <section class="founder">
 
-<img src="IMG-20260307-WA0000.jpg" alt="Satyarth Founder">
+<img src="IMG-20260307-WA0000.jpg">
+
+<h2>Satyarth</h2>
 
 <p>Founder of Kryvonix AI</p>
 
-</section>
+<p>Building powerful AI tools for creators, developers, and innovators.</p>
 
+</section>
 
 <section class="roadmap">
 
 <h2>Roadmap</h2>
 
-<div class="roadmap-item">
-Phase 1 – Website Launch
-</div>
-
-<div class="roadmap-item">
-Phase 2 – AI Demo Tools
-</div>
-
-<div class="roadmap-item">
-Phase 3 – Full AI Platform
-</div>
+<ul>
+<li>🚀 Launch Kryvonix AI website</li>
+<li>⚡ Release AI demo tools</li>
+<li>🧠 Build advanced AI platform</li>
+<li>🌍 Global launch</li>
+</ul>
 
 </section>
 
-
 <footer>
-© 2026 Kryvonix AI
+
+<p>© 2026 Kryvonix AI</p>
+
 </footer>
 
-
-<script>
-
-function generateAI(){
-
-const output=document.getElementById("aiResponse");
-
-output.innerHTML="Generating AI response...";
-
-setTimeout(function(){
-
-output.innerHTML="Kryvonix AI helps users generate ideas, automate work, and build smarter digital experiences.";
-
-},2000);
-
-}
-
-</script>
-
 </body>
-  </html>
+</html>
