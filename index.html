@@ -11,7 +11,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial;
+font-family:'Poppins',sans-serif;
 }
 
 body{
@@ -19,7 +19,7 @@ background:#0b0f19;
 color:white;
 }
 
-/* HEADER */
+/* header */
 
 header{
 display:flex;
@@ -31,11 +31,11 @@ background:#05070d;
 
 .logo{
 font-size:22px;
-font-weight:bold;
+font-weight:700;
 color:#4cc9f0;
 }
 
-/* HERO */
+/* hero */
 
 .hero{
 text-align:center;
@@ -56,18 +56,60 @@ color:#aaa;
 margin-bottom:30px;
 }
 
-/* BUTTON */
-
-.btn{
+.hero button{
 padding:14px 35px;
+border:none;
 background:#4cc9f0;
 color:black;
-text-decoration:none;
-border-radius:8px;
 font-size:16px;
+border-radius:8px;
+cursor:pointer;
 }
 
-/* FEATURES */
+/* ai demo */
+
+.ai-demo{
+padding:80px 20px;
+text-align:center;
+}
+
+.ai-demo h2{
+color:#4cc9f0;
+margin-bottom:30px;
+}
+
+.ai-box{
+max-width:600px;
+margin:auto;
+background:#111827;
+padding:40px;
+border-radius:12px;
+}
+
+.ai-box input{
+width:100%;
+padding:15px;
+border:none;
+border-radius:8px;
+margin-bottom:20px;
+background:#0b0f19;
+color:white;
+}
+
+.ai-box button{
+padding:12px 25px;
+background:#4cc9f0;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+.response{
+margin-top:20px;
+color:#ddd;
+}
+
+/* features */
 
 .features{
 padding:80px 10%;
@@ -81,17 +123,17 @@ margin-bottom:40px;
 
 .feature-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
 }
 
 .feature{
 background:#111827;
-padding:30px;
+padding:25px;
 border-radius:10px;
 }
 
-/* FOUNDER */
+/* founder */
 
 .founder{
 padding:80px 20px;
@@ -99,12 +141,16 @@ text-align:center;
 }
 
 .founder img{
-width:150px;
+width:140px;
 border-radius:50%;
-margin-bottom:20px;
+margin-bottom:15px;
 }
 
-/* ROADMAP */
+.founder h3{
+color:#4cc9f0;
+}
+
+/* roadmap */
 
 .roadmap{
 padding:80px 20px;
@@ -119,18 +165,19 @@ margin-bottom:40px;
 .roadmap-item{
 background:#111827;
 padding:20px;
-border-radius:10px;
 margin:15px auto;
 max-width:500px;
+border-radius:10px;
 }
 
-/* FOOTER */
+/* footer */
 
 footer{
 background:#05070d;
 text-align:center;
 padding:30px;
 color:#777;
+margin-top:60px;
 }
 
 </style>
@@ -139,8 +186,11 @@ color:#777;
 <body>
 
 <header>
+
 <div class="logo">Kryvonix AI</div>
+
 </header>
+
 
 <section class="hero">
 
@@ -148,7 +198,24 @@ color:#777;
 
 <p>Powerful AI tools for creators and developers.</p>
 
-<a href="ai.html" class="btn">Get Started</a>
+<button onclick="window.location.href='ai.html'">Get Started</button>
+
+</section>
+
+
+<section class="ai-demo">
+
+<h2>Try Kryvonix AI</h2>
+
+<div class="ai-box">
+
+<input id="aiInput" type="text" placeholder="Ask Kryvonix AI anything...">
+
+<button onclick="generateAI()">Generate</button>
+
+<div id="aiResponse" class="response"></div>
+
+</div>
 
 </section>
 
@@ -161,17 +228,17 @@ color:#777;
 
 <div class="feature">
 <h3>AI Generation</h3>
-<p>Create content instantly.</p>
+<p>Create content instantly using AI.</p>
 </div>
 
 <div class="feature">
-<h3>Smart Tools</h3>
-<p>Automate work with AI.</p>
+<h3>Smart Automation</h3>
+<p>Automate tasks and workflows.</p>
 </div>
 
 <div class="feature">
-<h3>Developer Ready</h3>
-<p>Built for innovators.</p>
+<h3>Developer Friendly</h3>
+<p>Built for builders and innovators.</p>
 </div>
 
 </div>
@@ -199,7 +266,7 @@ Phase 1 – Website Launch
 </div>
 
 <div class="roadmap-item">
-Phase 2 – AI Demo Release
+Phase 2 – AI Demo Tools
 </div>
 
 <div class="roadmap-item">
@@ -208,11 +275,31 @@ Phase 3 – Full AI Platform
 
 </section>
 
+
 <footer>
 
 © 2026 Kryvonix AI
 
 </footer>
 
+
+<script>
+
+function generateAI(){
+
+const output=document.getElementById("aiResponse");
+
+output.innerHTML="Generating AI response...";
+
+setTimeout(function(){
+
+output.innerHTML="Kryvonix AI helps users generate ideas, automate work, and build smarter digital experiences.";
+
+},2000);
+
+}
+
+</script>
+
 </body>
-</html>
+  </html>
