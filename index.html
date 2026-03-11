@@ -1,188 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<<link rel="icon" type="image/svg+xml" href="favicon.svg">>
-
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Kryvonix AI</title>
 
-<meta name="google-site-verification" content="googleae304ca54cf47259">
+<link rel="icon" type="image/png" href="favicon.png">
 
-<link rel="stylesheet" href="style.css">
+<style>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
 
-<link rel="icon" type="image/png" href="/favicon.png">
+body{
+background:#0b0f19;
+color:white;
+}
 
+/* HEADER */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 10%;
+background:#05070d;
+}
+
+.logo{
+font-size:22px;
+font-weight:700;
+color:#4cc9f0;
+}
+
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:white;
+font-size:14px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#4cc9f0;
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:120px 20px;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.hero span{
+color:#4cc9f0;
+}
+
+.hero p{
+color:#aaa;
+margin-bottom:30px;
+}
+
+.hero button{
+padding:14px 35px;
+border:none;
+background:#4cc9f0;
+color:black;
+font-size:16px;
+border-radius:8px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.hero button:hover{
+background:#38bdf8;
+}
+
+/* AI DEMO */
+
+.ai-demo{
+padding:80px 20px;
+text-align:center;
+}
+
+.ai-demo h2{
+font-size:34px;
+color:#4cc9f0;
+margin-bottom:10px;
+}
+
+.ai-demo p{
+color:#aaa;
+margin-bottom:40px;
+}
+
+.ai-box{
+max-width:600px;
+margin:auto;
+background:#111827;
+padding:40px;
+border-radius:15px;
+box-shadow:0 0 25px rgba(0,255,255,0.1);
+}
+
+.ai-box input{
+width:100%;
+padding:15px;
+border:none;
+border-radius:8px;
+margin-bottom:20px;
+background:#0b0f19;
+color:white;
+font-size:16px;
+outline:none;
+}
+
+.ai-box button{
+padding:12px 30px;
+background:#4cc9f0;
+border:none;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.ai-box button:hover{
+background:#38bdf8;
+}
+
+.response{
+margin-top:25px;
+color:#ddd;
+line-height:1.6;
+}
+
+/* LOADING DOTS */
+
+.loading{
+display:none;
+justify-content:center;
+gap:8px;
+margin-top:20px;
+}
+
+.loading span{
+width:10px;
+height:10px;
+background:#4cc9f0;
+border-radius:50%;
+animation:bounce 1s infinite;
+}
+
+.loading span:nth-child(2){
+animation-delay:0.2s;
+}
+
+.loading span:nth-child(3){
+animation-delay:0.4s;
+}
+
+@keyframes bounce{
+0%,80%,100%{transform:scale(0);}
+40%{transform:scale(1);}
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:30px;
+margin-top:80px;
+background:#05070d;
+color:#777;
+}
+
+</style>
+</head>
 
 <body>
 
 <header>
-
-<div class="logo">Kryvonix</div>
-
+<div class="logo">Kryvonix AI</div>
 <nav>
-<a href="#features">Features</a>
-<a href="#demo">AI Demo</a>
-<a href="#roadmap">Roadmap</a>
-<a href="#founder">Founder</a>
+<a href="#">Home</a>
+<a href="#">Features</a>
+<a href="#">Demo</a>
+<a href="#">Contact</a>
 </nav>
-
 </header>
 
-
-
 <section class="hero">
-
-<h1>The Future of AI Tools</h1>
-
-<p>
-Kryvonix is building powerful AI tools for developers and creators.
-Experience the next generation of artificial intelligence.
-</p>
-
-<a href="underdev.html" class="btn">Get Started</a>
-
+<h1>The Future of <span>Artificial Intelligence</span></h1>
+<p>Build smarter ideas with the next generation AI platform.</p>
+<button>Get Started</button>
 </section>
 
-
-
-<section id="features">
-
-<h2>Powerful AI Features</h2>
-
-<div class="features-container">
-
-<div class="feature-card">
-<h3>AI Chat</h3>
-<p>Ask questions and get intelligent responses instantly.</p>
-</div>
-
-<div class="feature-card">
-<h3>Image Generator</h3>
-<p>Create stunning visuals from prompts.</p>
-</div>
-
-<div class="feature-card">
-<h3>Code Assistant</h3>
-<p>Generate and debug code faster.</p>
-</div>
-
-</div>
-
-</section>
-
-
-
-<section id="demo">
-
+<section class="ai-demo">
 <h2>Try Kryvonix AI</h2>
+<p>Ask anything and see AI in action</p>
 
-<div class="ai-demo">
+<div class="ai-box">
 
-<div id="chat-box"></div>
+<input id="aiInput" type="text" placeholder="Ask Kryvonix AI anything...">
 
-<div class="input-area">
+<button onclick="generateAI()">Generate</button>
 
-<input id="user-input" type="text" placeholder="Ask Kryvonix something...">
-
-<button onclick="sendMessage()">Send</button>
-
+<div id="loading" class="loading">
+<span></span>
+<span></span>
+<span></span>
 </div>
 
-</div>
+<div id="aiResponse" class="response"></div>
 
+</div>
 </section>
-
-
-
-<section id="roadmap">
-
-<h2>Kryvonix Roadmap</h2>
-
-<div class="roadmap-container">
-
-<div class="roadmap-card">
-<h3>2026</h3>
-<p>AI Chat Launch</p>
-</div>
-
-<div class="roadmap-card">
-<h3>2027</h3>
-<p>Image Generator</p>
-</div>
-
-<div class="roadmap-card">
-<h3>2028</h3>
-<p>Full AI Platform</p>
-</div>
-
-</div>
-
-</section>
-
-
-
-<section id="founder">
-
-<h2>Founder</h2>
-
-<div class="founder-card">
-
-<img src="https://cdn-icons-png.flaticon.com/512/149/149071.png">
-
-<h3>Satyarth</h3>
-
-<p>Founder of Kryvonix AI. Building accessible AI tools for the future.</p>
-
-</div>
-
-</section>
-
-
 
 <footer>
-
-<p>© 2026 Kryvonix AI</p>
-
+© 2026 Kryvonix AI. All rights reserved.
 </footer>
-
-
 
 <script>
 
-function sendMessage(){
+function generateAI(){
 
-let input=document.getElementById("user-input");
-let chat=document.getElementById("chat-box");
+const loading = document.getElementById("loading");
+const response = document.getElementById("aiResponse");
 
-let userText=input.value;
-
-if(userText==="") return;
-
-let userMsg=document.createElement("div");
-userMsg.className="user-msg";
-userMsg.innerText=userText;
-
-chat.appendChild(userMsg);
-
-input.value="";
-
+response.innerHTML="";
+loading.style.display="flex";
 
 setTimeout(function(){
 
-let aiMsg=document.createElement("div");
-aiMsg.className="ai-msg";
+loading.style.display="none";
 
-aiMsg.innerText="Kryvonix AI is still under development, but soon it will answer questions, generate images and assist with coding.";
+response.innerHTML=
+"Kryvonix AI is a next-generation artificial intelligence platform designed to help users generate ideas, automate tasks, and create smarter digital experiences.";
 
-chat.appendChild(aiMsg);
-
-chat.scrollTop=chat.scrollHeight;
-
-},700);
+},2000);
 
 }
 
