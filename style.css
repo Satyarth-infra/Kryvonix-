@@ -161,10 +161,10 @@ text-align:center;
 }
 
 .founder img{
-width:140px;
-height:140px;
+width:200px;
+height:auto;
 border-radius:50%;
-margin-bottom:15px;
+margin-bottom:0 auto;
 }
 
 /* ROADMAP */
