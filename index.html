@@ -1,258 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kryvonix AI</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-background:#0b0f19;
-color:white;
-}
-
-/* HEADER */
-
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 10%;
-background:#05070d;
-}
-
-.logo{
-font-size:22px;
-font-weight:600;
-color:#4cc9f0;
-}
-
-nav a{
-margin-left:20px;
-text-decoration:none;
-color:white;
-}
-
-/* HERO */
-
-.hero{
-text-align:center;
-padding:120px 10%;
-}
-
-.hero h1{
-font-size:45px;
-margin-bottom:20px;
-}
-
-.hero p{
-color:#aaa;
-margin-bottom:30px;
-}
-
-.btn{
-padding:12px 25px;
-background:#4cc9f0;
-border:none;
-color:black;
-font-weight:600;
-cursor:pointer;
-border-radius:5px;
-text-decoration:none;
-}
-
-/* FEATURES */
-
-.features{
-padding:80px 10%;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-}
-
-.feature-box{
-background:#10172a;
-padding:30px;
-border-radius:10px;
-text-align:center;
-}
-
-.feature-box h3{
-margin-bottom:10px;
-color:#4cc9f0;
-}
-
-/* AI DEMO */
-
-.demo{
-padding:80px 10%;
-text-align:center;
-}
-
-.demo-box{
-margin-top:30px;
-background:#10172a;
-padding:30px;
-border-radius:10px;
-}
-
-.demo-box input{
-width:80%;
-padding:12px;
-border:none;
-border-radius:5px;
-margin-bottom:10px;
-}
-
-.demo-box button{
-padding:10px 20px;
-background:#4cc9f0;
-border:none;
-border-radius:5px;
-cursor:pointer;
-}
-
-/* FOUNDER */
-
-.founder{
-padding:80px 10%;
-text-align:center;
-}
-
-.founder img{
-width:200px;
-border-radius:50%;
-border:4px solid #4cc9f0;
-margin-bottom:20px;
-}
-
-.founder h2{
-color:#4cc9f0;
-}
-
-/* ROADMAP */
-
-.roadmap{
-padding:80px 10%;
-text-align:center;
-}
-
-.roadmap ul{
-list-style:none;
-margin-top:30px;
-}
-
-.roadmap li{
-margin-bottom:15px;
-color:#aaa;
-}
-
-/* FOOTER */
-
-footer{
-text-align:center;
-padding:20px;
-background:#05070d;
-margin-top:50px;
-color:#777;
-}
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kryvonix AI</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-<div class="logo">Kryvonix AI</div>
-<nav>
-<a href="#">Home</a>
-<a href="#">Features</a>
-<a href="#">Roadmap</a>
-</nav>
-</header>
+  <!-- Header -->
+  <header>
+    <div class="logo">Kryvonix</div>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#features">Features</a>
+      <a href="#ai-demo">AI Demo</a>
+      <a href="#founder">Founder</a>
+      <a href="#roadmap">Roadmap</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<section class="hero">
-<h1>Kryvonix AI</h1>
-<p>Next-generation AI tools for creators, developers, and innovators.</p>
-<a href="#demo" class="btn">Get Started</a>
-</section>
+  <!-- Hero Section -->
+  <section id="hero">
+    <h1>Welcome to Kryvonix AI</h1>
+    <p>The next-generation AI platform for developers and creators.</p>
+    <a href="#ai-demo" class="btn">Get Started</a>
+    <img src="IMG-20260307-WAOOOO.jpg" alt="Hacker Face" class="hacker-image">
+  </section>
 
-<section class="features">
+  <!-- Features Section -->
+  <section id="features">
+    <h2>Features</h2>
+    <div class="feature-container">
+      <div class="feature-box">
+        <h3>Fast AI Models</h3>
+        <p>Run advanced AI algorithms in seconds using cloud-powered infrastructure.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Easy Integration</h3>
+        <p>Connect our AI to your website or app without complicated setup.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Customizable Tools</h3>
+        <p>Create AI solutions tailored for your needs, no coding required.</p>
+      </div>
+    </div>
+  </section>
 
-<div class="feature-box">
-<h3>⚡ Smart Automation</h3>
-<p>Automate tasks and workflows with intelligent AI tools.</p>
-</div>
+  <!-- AI Demo Section -->
+  <section id="ai-demo">
+    <h2>AI Demo (Under Development)</h2>
+    <div class="ai-demo-box">
+      <textarea placeholder="Type your input here..." disabled></textarea>
+      <button class="btn" disabled>Run AI</button>
+      <p style="margin-top:10px; color:#4cc9f0;">AI is still under development</p>
+    </div>
+  </section>
 
-<div class="feature-box">
-<h3>🧠 AI Intelligence</h3>
-<p>Generate ideas, content, and solutions instantly.</p>
-</div>
+  <!-- Founder Section -->
+  <section id="founder">
+    <h2>Founder</h2>
+    <div class="founder-box">
+      <img src="IMG-20260307-WAOOOO.jpg" alt="Founder Image" class="founder-image">
+      <p><strong>Satyarth</strong></p>
+      <p>Founder & CEO of Kryvonix AI</p>
+    </div>
+  </section>
 
-<div class="feature-box">
-<h3>🛠 Developer Friendly</h3>
-<p>Built for builders and innovators creating the future.</p>
-</div>
+  <!-- Roadmap Section -->
+  <section id="roadmap">
+    <h2>Roadmap</h2>
+    <div class="roadmap-container">
+      <div class="roadmap-step">
+        <h3>Phase 1</h3>
+        <p>Website launch & initial AI tools development.</p>
+      </div>
+      <div class="roadmap-step">
+        <h3>Phase 2</h3>
+        <p>Integration of AI demo features and beta testing.</p>
+      </div>
+      <div class="roadmap-step">
+        <h3>Phase 3</h3>
+        <p>Full AI release and marketing campaigns.</p>
+      </div>
+    </div>
+  </section>
 
-</section>
-
-<section class="demo" id="demo">
-
-<h2>Try Kryvonix AI</h2>
-<p>Demo preview of the future AI assistant.</p>
-
-<div class="demo-box">
-
-<input type="text" placeholder="Ask Kryvonix AI something...">
-
-<br>
-
-<button>Generate</button>
-
-</div>
-
-</section>
-
-<section class="Satyarth">
-
-<img src="IMG-20260307-WA0000.jpg">
-
-<h2>Satyarth</h2>
-
-<p>Founder of Kryvonix AI</p>
-
-<p>Building powerful AI tools for creators, developers, and innovators.</p>
-
-</section>
-
-<section class="roadmap">
-
-<h2>Roadmap</h2>
-
-<ul>
-<li>🚀 Launch Kryvonix AI website</li>
-<li>⚡ Release AI demo tools</li>
-<li>🧠 Build advanced AI platform</li>
-<li>🌍 Global launch</li>
-</ul>
-
-</section>
-
-<footer>
-
-<p>© 2026 Kryvonix AI</p>
-
-</footer>
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: info@kryvonix.com</p>
+    <p>Follow us on social media for updates.</p>
+  </section>
 
 </body>
-</html>
+        </html>
